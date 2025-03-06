@@ -1,3 +1,7 @@
+input {
+    text-align: center;
+}
+
 input::placeholder {
     color: black;
     text-align: center;
