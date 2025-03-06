@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}overriden title{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('/css/forms.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="form">
+        <h2 class="form-title">Signup</h2>
+        {{ form_start(form) }}
+            {% for field in form %}
+                <div class="form-group form-column">
+                    {{ form_widget(field) }}
+                    {{ form_errors(field) }}
+                </div>
+            {% endfor %}
+            <button type="submit" class="submit-btn">Submit</button>
+        {{ form_end(form, {'render_rest': false}) }}
+    </div>
+{% endblock %} 
+
+{% block footer %}
+{% endblock %}
